@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+
+[assembly: InternalsVisibleTo("MSTest_problem_plecakowy")]
 
 namespace Projekt2_Problem_plecakowy
 {
@@ -11,7 +14,7 @@ namespace Projekt2_Problem_plecakowy
     {
         int number_of_items;    // liczba możliwych przedmiotów
         int seed;
-        List<Item> items = new List<Item>();
+        public List<Item> items = new List<Item>();
 
 
         // konstruktor 
