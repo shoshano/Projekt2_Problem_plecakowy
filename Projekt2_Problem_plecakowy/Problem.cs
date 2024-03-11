@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: InternalsVisibleTo("MSTest_problem_plecakowy")]
+[assembly: InternalsVisibleTo("MSTest_problem_plecakowy"), InternalsVisibleTo("GUI")] 
 
 namespace Projekt2_Problem_plecakowy
 {
