@@ -30,7 +30,6 @@ namespace Projekt2_Problem_plecakowy
         { 
             get { return results; }
             set {  results = value; }
-        
         }
 
         public Result(int tw, int tv)
@@ -38,24 +37,6 @@ namespace Projekt2_Problem_plecakowy
             total_value = tv;
             total_weight = tw;
         
-        }
-
-        public void PrintList(List<Item> list)
-        {
-            foreach (Item item in list)
-            {
-                Console.WriteLine("Value: " + item.Value + "  Weight: " + item.Weight + "  Ratio: " + item.Ratio);
-            }
-        }
-
-        public void PrintResoults(List<Item> list)
-        {
-            Console.WriteLine("\n====================");
-            Console.WriteLine("Items in backpack: ");
-            PrintList(list);
-            Console.WriteLine("Total value: " + total_value);
-            Console.WriteLine("Total weight: " + total_weight);
-
         }
 
         public override string ToString()

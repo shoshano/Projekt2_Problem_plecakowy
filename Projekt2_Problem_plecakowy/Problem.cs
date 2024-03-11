@@ -14,7 +14,7 @@ namespace Projekt2_Problem_plecakowy
     {
         int number_of_items;    // liczba możliwych przedmiotów
         int seed;
-        public List<Item> items = new List<Item>();
+        public List<Item> items;
 
 
         // konstruktor 
@@ -22,17 +22,19 @@ namespace Projekt2_Problem_plecakowy
         {
             number_of_items = nr;
             seed = s;
+            items = new List<Item>();
             FillandSortList(this.number_of_items, this.seed);
         }
 
         public void FillandSortList( int nr, int s)
         {
+            
             Random random = new Random();
             for (int i = 0; i < nr; i++)
             {
                 int w = random.Next(1, 30);
                 int v = random.Next(100);
-                Item item = new Item(v, w);
+                Item item = new Item(i, v, w);
                 items.Add(item);
             }
             items = items.OrderByDescending(item => item.Ratio).ToList();
@@ -50,7 +52,7 @@ namespace Projekt2_Problem_plecakowy
 
         
 
-        public string Solve(int capacity)
+        public Result Solve(int capacity)
         {
             Result result = new Result(0 , 0);
             result.Results = new List<Item>();
@@ -67,7 +69,10 @@ namespace Projekt2_Problem_plecakowy
                 
             }
             //PrintList(result.Results);
-            return result.ToString();
+            Console.WriteLine(result.ToString());
+            return result;
         }
+
+        
     }
 }

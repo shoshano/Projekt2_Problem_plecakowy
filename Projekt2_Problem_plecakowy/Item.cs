@@ -8,9 +8,10 @@ namespace Projekt2_Problem_plecakowy
 {
     internal class Item
     {
+        int id;
         int value;      // wartosc przedmiotu 
         int weight;   // waga przedmiotu 
-        int ratio;      // przypisany numer
+        double ratio;      // przypisany numer
 
         public int Value
         {
@@ -24,21 +25,29 @@ namespace Projekt2_Problem_plecakowy
             set { this.weight = value; }
         }
 
-        public int Ratio
+        public double Ratio
         {
             get { return this.ratio; }
             set { this.ratio = value; }
         }
 
-        public Item(int value, int weight)
+        public int ID
         {
+            get { return this.id; }
+            set { this.id = value;}
+        }
+
+
+        public Item(int id ,int value, int weight)
+        {
+            this.id = id;
             this.value = value;
             this.weight = weight;
-            this.ratio = value/weight;
+            this.ratio = (double)value/weight;
         }
         public override string ToString()
         {
-            return "Value: " + Convert.ToString(value) + " Weight: " + Convert.ToString(weight) + " Ratio: " + Convert.ToString(ratio) + "\n";
+            return "ID " + ID + " Value: " + Convert.ToString(value) + " Weight: " + Convert.ToString(weight) + " Ratio: " + Convert.ToString(ratio) + "\n";
         }
 
     }
