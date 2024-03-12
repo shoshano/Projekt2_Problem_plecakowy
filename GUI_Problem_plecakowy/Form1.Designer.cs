@@ -115,6 +115,7 @@
             textBox_list_of_items.Multiline = true;
             textBox_list_of_items.Name = "textBox_list_of_items";
             textBox_list_of_items.ReadOnly = true;
+            textBox_list_of_items.ScrollBars = ScrollBars.Vertical;
             textBox_list_of_items.Size = new Size(248, 567);
             textBox_list_of_items.TabIndex = 7;
             // 
@@ -124,8 +125,10 @@
             textBox_items_in_backpack.Multiline = true;
             textBox_items_in_backpack.Name = "textBox_items_in_backpack";
             textBox_items_in_backpack.ReadOnly = true;
+            textBox_items_in_backpack.ScrollBars = ScrollBars.Vertical;
             textBox_items_in_backpack.Size = new Size(249, 238);
             textBox_items_in_backpack.TabIndex = 8;
+            textBox_items_in_backpack.TextChanged += textBox_items_in_backpack_TextChanged;
             // 
             // label_list_of_items
             // 

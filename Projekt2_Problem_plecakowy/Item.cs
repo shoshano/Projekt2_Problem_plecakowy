@@ -47,7 +47,7 @@ namespace Projekt2_Problem_plecakowy
         }
         public override string ToString()
         {
-            return "ID " + ID + " Value: " + Convert.ToString(value) + " Weight: " + Convert.ToString(weight) + " Ratio: " + Convert.ToString(ratio) + "\n";
+            return "ID " + ID +  "\tV: " + Convert.ToString(value) + "\tW: " + Convert.ToString(weight) + Environment.NewLine;
         }
 
     }
