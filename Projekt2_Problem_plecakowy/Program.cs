@@ -12,10 +12,7 @@
             int c = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
             Problem nowy = new Problem(nr, seed);
-            Result r = nowy.Solve(c);
-            Console.WriteLine(r.Results[1].Weight);
-
-           
+            Result r = nowy.Solve(c);                       
         }
     }
 }

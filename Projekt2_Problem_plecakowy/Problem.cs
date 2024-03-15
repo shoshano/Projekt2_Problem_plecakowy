@@ -39,7 +39,7 @@ namespace Projekt2_Problem_plecakowy
                 items.Add(item);
             }
             items = items.OrderByDescending(item => item.Ratio).ToList();
-            //PrintList(items);
+            
         }
 
         public string PrintList()
@@ -70,7 +70,6 @@ namespace Projekt2_Problem_plecakowy
                 }
                 
             }
-            //PrintList(result.Results);
             Console.WriteLine(result.ToString());
             return result;
         }

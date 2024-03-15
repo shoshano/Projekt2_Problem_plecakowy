@@ -42,12 +42,12 @@ namespace Projekt2_Problem_plecakowy
         public override string ToString()
         {
             string str = "Items in backpack: " + Environment.NewLine;
-            str +=  "Total weight: " + Convert.ToString(total_weight) + Environment.NewLine + "Total value: " + Convert.ToString(total_value) + Environment.NewLine;
+            str += "Total weight: " + Convert.ToString(total_weight) + Environment.NewLine + 
+                "Total value: " + Convert.ToString(total_value) + Environment.NewLine;
             foreach (Item item in results)
             {
                 str += item.ToString();
             }
-            
             return str;
         }
     }
